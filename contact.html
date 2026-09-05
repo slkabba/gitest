@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Contact — Hello, World!</title>
+    <style>
+      :root { color-scheme:dark; --ink:#eff4ff; --muted:#aeb9d4; --violet:#a78bfa; --cyan:#4de7e2; } * { box-sizing:border-box; }
+      body { min-height:100vh; margin:0; display:grid; place-items:center; padding:2rem; background:radial-gradient(circle at 15% 20%,#402b84 0,transparent 28rem),radial-gradient(circle at 85% 75%,#075c6f 0,transparent 30rem),#0b1020; color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,sans-serif; }
+      main { width:min(92vw,46rem); padding:clamp(2rem,7vw,4rem); text-align:center; border:1px solid rgba(255,255,255,.18); border-radius:2rem; background:rgba(13,19,39,.58); box-shadow:0 2rem 5rem rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.08); backdrop-filter:blur(18px); animation:enter .8s both; }
+      .eyebrow { color:var(--cyan); font-size:.78rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; } h1 { margin:.7rem 0 0; font-size:clamp(3rem,9vw,5.5rem); letter-spacing:-.065em; line-height:1; background:linear-gradient(110deg,#fff,#c6bdff 52%,#78f4ed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+      p { margin:1.25rem auto 1.5rem; color:var(--muted); font-size:1.1rem; line-height:1.6; } form { display:grid; gap:.85rem; text-align:left; } label { color:var(--muted); font-size:.88rem; font-weight:700; } input,textarea { width:100%; margin-top:.35rem; padding:.85rem 1rem; border:1px solid rgba(255,255,255,.15); border-radius:.8rem; background:rgba(255,255,255,.07); color:var(--ink); font:inherit; } textarea { min-height:6rem; resize:vertical; } button { justify-self:center; border:0; border-radius:999px; padding:.8rem 1.35rem; background:linear-gradient(110deg,var(--violet),var(--cyan)); color:#101426; cursor:pointer; font:700 .95rem inherit; } nav { display:flex; justify-content:center; gap:.4rem; margin-top:1.6rem; } nav a { padding:.65rem .95rem; border-radius:999px; color:var(--ink); font-size:.9rem; font-weight:700; text-decoration:none; transition:.2s; } nav a:hover,nav a[aria-current="page"] { background:rgba(255,255,255,.12); transform:translateY(-2px); } @keyframes enter { from { opacity:0; transform:translateY(1.5rem) scale(.98); } to { opacity:1; transform:none; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">Say hello</div>
+      <h1>Let’s connect.</h1>
+      <p>Have an idea, question, or simply want to wave? Send a note.</p>
+      <form onsubmit="event.preventDefault(); this.querySelector('button').textContent = 'Message ready — thank you!';">
+        <label>Name<input required name="name" placeholder="Your name" /></label>
+        <label>Email<input required type="email" name="email" placeholder="you@example.com" /></label>
+        <label>Message<textarea required name="message" placeholder="What’s on your mind?"></textarea></label>
+        <button type="submit">Send message</button>
+      </form>
+      <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav>
+    </main>
+  </body>
+</html>
