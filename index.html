@@ -80,6 +80,9 @@
       }
       p { max-width: 31rem; margin: 1.5rem auto 0; color: var(--muted); font-size: clamp(1rem, 2.4vw, 1.18rem); line-height: 1.65; }
       .spark { color: var(--violet); }
+      nav { display: flex; justify-content: center; gap: .4rem; margin-top: 2rem; }
+      nav a { padding: .65rem .95rem; border-radius: 999px; color: var(--ink); font-size: .9rem; font-weight: 700; text-decoration: none; transition: background .2s, transform .2s; }
+      nav a:hover, nav a[aria-current="page"] { background: rgba(255,255,255,.12); transform: translateY(-2px); }
 
       @keyframes enter { from { opacity: 0; transform: translateY(1.5rem) scale(.98); } to { opacity: 1; transform: none; } }
       @keyframes drift { to { transform: translate(2rem, 2.5rem) rotate(15deg); } }
@@ -93,6 +96,11 @@
       <div class="eyebrow">A fresh beginning</div>
       <h1>Hello,<br />World<span class="spark">!</span></h1>
       <p>A tiny page with a little cosmic polish—ready for whatever you build next.</p>
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </main>
   </body>
 </html>
